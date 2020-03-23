@@ -40,7 +40,7 @@ router.post("/register", (req, res) => {
         })
         
         function protected (req, res, next)  {
-            console.log(req.session)
+          
             if (req.session && req.session.user) {
                 next();
             } else {
